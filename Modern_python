@@ -1,0 +1,764 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyODfqMpYoavVbF5LXRpz96U",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/Hikmee/ML/blob/master/Modern_python\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "**Dictionary**"
+      ],
+      "metadata": {
+        "id": "IVtuUXQfH2xw"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "\n",
+        "from typing import Dict , Union\n",
+        "import pprint # to print objects dict etc in a decent way"
+      ],
+      "metadata": {
+        "id": "_JNJlxVmIKei"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "Key: Union[str,int] #custom type\n",
+        "Value: Union[str, tuple, set ] # custom types\n",
+        "data: Dict[str , str] ={\"name\":\"hikmat\" , \"fname\":\"Sibghat\"}\n",
+        "data\n",
+        "pprint.pprint(data)\n",
+        "print(data[\"name\"]) # key should be passed as we have puted in dictionary like string in dict so will pas as str"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "7HpBQ9OJH6vu",
+        "outputId": "28e3a62c-b6f4-4de4-e739-69f02b8df0a3"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "{'fname': 'Sibghat', 'name': 'hikmat'}\n",
+            "hikmat\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Note: Hashable means unique identification that can't be changed.\n",
+        "\n",
+        "key type should be hashable\n",
+        "like we can't use list key and we can make tuple a key because it's hashable(immutable)"
+      ],
+      "metadata": {
+        "id": "PLpr73o0LVL-"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#type casting\n",
+        "\n",
+        "abc: set = {1,2,3,4,}\n",
+        "x : list[int] = list(abc)\n",
+        "print(x)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "DgcdDM8LIVoV",
+        "outputId": "fa2dc033-b73f-42e9-a526-a3b499ea7c1c"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[1, 2, 3, 4]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "**SET data type:**\n",
+        "data: set = {1,2,3,3,}\n",
+        "note: we can't apply atration on set data type , for that we use typecasting\n",
+        "NOTE: set takes dta nique, or it holds the unique data"
+      ],
+      "metadata": {
+        "id": "LJMkHfZqSaqy"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#value addition in dict\n",
+        "\n",
+        "data[\"name\"] = \"Qudrat\""
+      ],
+      "metadata": {
+        "id": "mjkh-XqqNDrf"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print(data.get(\"name\" , \"NA\")) # if key will be available so it will give the vauw if not availabe than not give an error , here will give na"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "lyRFrVmUN-_i",
+        "outputId": "75d90932-ddf2-4f11-88a4-cb59c4e7b229"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Qudrat\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "**data.keys** will give all keys\n",
+        "**data.values** will give all values in dictionary\n",
+        "**data.items** will give us both key and value of a dictionary in the orm of typle\n",
+        "Note: all above are generator function means to execute it we should have to write it in for/ist loop\n"
+      ],
+      "metadata": {
+        "id": "AN8z8Z_VSWlY"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "{k : v for k,v in data.items()} # unzip the dictionay\n",
+        "# we can also shufle keys and values by list comprehensive\n",
+        "{v : k for k,v in data.items()}\n",
+        "\n",
+        "Key: Union[str,int]\n",
+        "keys:list[str] = ['name' , 'fname' , 'ID']\n",
+        "data:dict[Key,Value]={}\n",
+        "print(data)\n",
+        "\n",
+        "ndata=data.fromkeys(keys) # this will add list to the dict as key , if key will not be present then we can print a default value like NA as well\n",
+        "print(ndata)\n",
+        "\n",
+        "\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 254
+        },
+        "id": "29jqlIM9QsaW",
+        "outputId": "1909ceff-e30f-4c38-e689-7b2d25262d9e"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "error",
+          "ename": "NameError",
+          "evalue": "ignored",
+          "traceback": [
+            "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+            "\u001b[0;31mNameError\u001b[0m                                 Traceback (most recent call last)",
+            "\u001b[0;32m<ipython-input-11-b3114c38f332>\u001b[0m in \u001b[0;36m<cell line: 7>\u001b[0;34m()\u001b[0m\n\u001b[1;32m      5\u001b[0m \u001b[0mKey\u001b[0m\u001b[0;34m:\u001b[0m \u001b[0mUnion\u001b[0m\u001b[0;34m[\u001b[0m\u001b[0mstr\u001b[0m\u001b[0;34m,\u001b[0m\u001b[0mint\u001b[0m\u001b[0;34m]\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m      6\u001b[0m \u001b[0mkeys\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0mlist\u001b[0m\u001b[0;34m[\u001b[0m\u001b[0mstr\u001b[0m\u001b[0;34m]\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0;34m[\u001b[0m\u001b[0;34m'name'\u001b[0m \u001b[0;34m,\u001b[0m \u001b[0;34m'fname'\u001b[0m \u001b[0;34m,\u001b[0m \u001b[0;34m'ID'\u001b[0m\u001b[0;34m]\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m----> 7\u001b[0;31m \u001b[0mdata\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0mdict\u001b[0m\u001b[0;34m[\u001b[0m\u001b[0mKey\u001b[0m\u001b[0;34m,\u001b[0m\u001b[0mValue\u001b[0m\u001b[0;34m]\u001b[0m\u001b[0;34m=\u001b[0m\u001b[0;34m{\u001b[0m\u001b[0;34m}\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m      8\u001b[0m \u001b[0mprint\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mdata\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m      9\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;31mNameError\u001b[0m: name 'Key' is not defined"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "**Class08**\n",
+        "24/10/2023"
+      ],
+      "metadata": {
+        "id": "u-9_WUUvL3yT"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "TypeDict is basically used for making long types eg if we make dictionary in list (nested typing),\n",
+        "and we import this from typing"
+      ],
+      "metadata": {
+        "id": "Wh7cnKhfSYxY"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "methods: list[str] = [m for m in dir(data) if \"__\" not in m]\n",
+        "print(methods) # these all are dictionary methods"
+      ],
+      "metadata": {
+        "id": "DFf3u5I4SNct",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "32603824-c0d8-47dc-b1a4-c9927af6fc16"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "['clear', 'copy', 'fromkeys', 'get', 'items', 'keys', 'pop', 'popitem', 'setdefault', 'update', 'values']\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import pandas as pd\n",
+        "from typing import Any"
+      ],
+      "metadata": {
+        "id": "-MQrky9Uaake"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "students_data:Dict[str, list[Any]] = {\n",
+        "    \"name\": [\"Hikmat Ullah\" , \"Qudrat Ullah\" , \"Hassnain\"],\n",
+        "    \"Father Name\": [\"Sibghat Ullah\" , \"Sibghat Ullah\",\"Sibghat Ullah\"],\n",
+        "    \"Reg No\": [\"20pwcse1919\" , \"20pwcse1919\" ,\"20pwcse1919\"]\n",
+        "}\n",
+        "dataframe: pd.DataFrame =pd.DataFrame(students_data)\n",
+        "print(dataframe)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Fu1CRHadjthE",
+        "outputId": "e9ebf135-bf9d-46e9-f2d9-99b48494e8b0"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "           name    Father Name       Reg No\n",
+            "0  Hikmat Ullah  Sibghat Ullah  20pwcse1919\n",
+            "1  Qudrat Ullah  Sibghat Ullah  20pwcse1919\n",
+            "2      Hassnain  Sibghat Ullah  20pwcse1919\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "BT_kunisj7oA"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "jsonify method converts the dictionary into json fromat"
+      ],
+      "metadata": {
+        "id": "NVWDIReDlh5c"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "**Class 09**"
+      ],
+      "metadata": {
+        "id": "HMZipYp3l--E"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "**Attretion** <br>\n",
+        "\n",
+        "Note: if we perform attretaion on dictionary so by default this gives us keys <br>\n",
+        "we cant directly perform attretion on set"
+      ],
+      "metadata": {
+        "id": "cnfmz5JBpUwr"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "input from user <br>\n",
+        "input function <br>\n",
+        "\n",
+        "*   default type = string\n",
+        "<br>sys.argv(for console input in abc.py file) <br>\n",
+        "default type object( means we will receive that what we will put in it)\n"
+      ],
+      "metadata": {
+        "id": "SzUc3PKFmL5_"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "input : str = input(\"enter your name\")"
+      ],
+      "metadata": {
+        "id": "wlYVqVQXmB7Q"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "console input ( argv)\n",
+        "\n",
+        "\n",
+        "*   passed in console with file name\n",
+        "*   to use ( import sys)\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "_sGEVG4bnrNz"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import sys\n",
+        "print(\"line1\")\n",
+        "print(sys.argv) # iterative data type , argv type is list\n"
+      ],
+      "metadata": {
+        "id": "5uGfI1Enn3hn"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "to check methods of any datatype <br>\n",
+        "dir(datatype)"
+      ],
+      "metadata": {
+        "id": "jzPLj4Wnp5LD"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "**Controls:**\n",
+        "\n",
+        "\n",
+        "1.   break\n",
+        "2.   continue\n",
+        "3.   pass ( eg if we write some code and want to write the rest of the code so our program will skip the error here instead giving error)\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "FXWsxGkKxTlk"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "**Class 09**"
+      ],
+      "metadata": {
+        "id": "8uAsMm6vxATy"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Functions\n",
+        "\n",
+        "\n",
+        "1.   return\n",
+        "2.   non-return\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "N7hX7-sTxDye"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Requaired parameters function"
+      ],
+      "metadata": {
+        "id": "iBdDZILYyPl6"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def addnum(num1 : int , num2 : int) -> int: # function declearation with parameters\n",
+        "  return(num1+num2)\n",
+        "\n",
+        "addnum(3,4) # function call with arguments"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "cR8YGttZxQOc",
+        "outputId": "a84ee8a4-2ad2-477b-88c8-a052a537527a"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "7"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 1
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "function with optional parameters"
+      ],
+      "metadata": {
+        "id": "taxX814XyT5B"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def add_numbr(num1:int , num2:int = 0) -> int:\n",
+        "  print(num1 , num2)\n",
+        "  return num1 + num2\n",
+        "\n",
+        "add_numbr(1,5)\n",
+        "add_numbr(1)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "oeGo8moGyZ3H",
+        "outputId": "27c906aa-72f0-42c0-a611-788b1094f48b"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "1 5\n",
+            "1 0\n"
+          ]
+        },
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "1"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 2
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "**Lambda function** <br>\n",
+        "one line function <br>\n",
+        "without name function <br>\n",
+        "only use in this line <br>\n",
+        "annonymus function\n",
+        "<br>\n",
+        "**Syntax** <br>\n",
+        "lambda param1,param2:function_body <br>\n",
+        "\n",
+        "*NOTE*: we use lambda function for space efficiency <br>\n",
+        "callabe"
+      ],
+      "metadata": {
+        "id": "iCPEkYdpy8UP"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "a = lambda num1,num2: num1+num2 #lambda function decleration\n",
+        "\n",
+        "a(7,8) # function call"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Ud847rBDxvQi",
+        "outputId": "a2ca61be-fd0a-4834-be38-b94021fd85f2"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "15"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 3
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "data: list[int] = [1,2,3,4,5,6,7,8]\n",
+        "\n",
+        "data = list(map(lambda x:x**2 , data)) # we apply attretion (list) because its generator function\n",
+        "data"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "WHSnNbw10DQL",
+        "outputId": "0cc3150c-3118-49cc-ff01-17af1a9523e5"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "[1, 4, 9, 16, 25, 36, 49, 64]"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 5
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "data: list[int] = [1,2,3,4,5,6,7,8]\n",
+        "\n",
+        "data = list(filter(lambda x:x%2 == 0 , data)) # we apply attretion (list) because its generator function\n",
+        "data"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "6xyXi_2O0v3F",
+        "outputId": "e2cbc0d7-af19-4ab7-9448-031dfb3a6cce"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "[2, 4, 6, 8]"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 6
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "**Generator function** <br>\n",
+        "*iterate one by one\n",
+        "<br> *stop after each iteration <br>\n",
+        "*remember old (last) iteration value <br>\n",
+        "*next iterate go forward from that last one"
+      ],
+      "metadata": {
+        "id": "Uf4t_oH73cd_"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def my_range(start:int , end:int , step:int):\n",
+        "  for i in range(start , end+1 , step):\n",
+        "    yield i #generator function\n",
+        "\n",
+        "a = list(my_range(1,10 , 1))\n",
+        "a\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "diYgcLD71BWx",
+        "outputId": "82c65060-9b00-4544-85c4-1e02ccb7dfb3"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 10
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "from collections.abc import Iterator\n",
+        "\n",
+        "def my_range(start:int , end:int , step:int = 1)->Iterator[int]:\n",
+        "  for i in range(start , end+1 , step):\n",
+        "    yield i #generator function\n",
+        "\n",
+        "a :Iterator[int]= my_range(1,10 , 1)\n",
+        "print(next(a))\n",
+        "print(next(a))\n",
+        "\n",
+        "print(type(a))\n",
+        "\n",
+        "for i in a:\n",
+        "  print(i)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "EHYb5fbK5CQL",
+        "outputId": "27ffd7c0-0696-4145-ced3-b8b4da9c7d96"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "1\n",
+            "2\n",
+            "<class 'generator'>\n",
+            "3\n",
+            "4\n",
+            "5\n",
+            "6\n",
+            "7\n",
+            "8\n",
+            "9\n",
+            "10\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "passing Unlimited arguments\n",
+        "\n",
+        "\n",
+        "1.   *args\n",
+        "2.   **keyargs\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "6X4MK0GP-LXG"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "from typing import Tuple, Dict\n",
+        "def gret(*names: Tuple[str , ...])->None:\n",
+        "  print(f\"hello{names}\")"
+      ],
+      "metadata": {
+        "id": "_Z-EmlNl6LpN"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "-jP9T7_gAaNj"
+      },
+      "execution_count": null,
+      "outputs": []
+    }
+  ]
+}
