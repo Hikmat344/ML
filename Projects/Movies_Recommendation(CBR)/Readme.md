@@ -19,6 +19,7 @@ The recommender system employs content-based filtering, which recommends movies 
 ## Front-End Interface
 
 To enhance user experience, a user-friendly front-end interface was created using Streamlit. Users can select their preferred movie from the provided list, and upon clicking the recommendation button, the system suggests a curated list of movies based on their selection.
+and deployed it on this URL: [path](https://www.kaggle.com/datasets/tmdb/tmdb-movie-metadata)
 
 ## How to Run
 
