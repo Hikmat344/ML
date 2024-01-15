@@ -23,6 +23,7 @@ Feel free to explore the repository at your own pace. Whether you're here to che
 Get Involved 🤝
 I extend an open invitation to fellow ML enthusiasts! If you're passionate about machine learning and want to contribute, your skills are more than welcome. Feel free to explore the projects, open issues, and submit pull requests. Let's collaborate and create something amazing together!
 
-Thank you for joining me on this ML adventure. Happy coding!  🚀✨
+Thank you for joining me on this ML adventure. 
+Happy coding!  🚀✨
 
 Best regards! 
