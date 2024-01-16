@@ -1,6 +1,7 @@
 # Welcome to My Machine Learning Journey Repository! 🚀
 
-Hello and welcome, fellow ML enthusiast! 👋 I'm excited to share my machine-learning journey with you. This repository serves as a hub for all the resources, projects, and insights I've gathered along the way.
+Hello and welcome, fellow ML enthusiasts! 👋 
+I'm excited to share my machine-learning journey with you. This repository serves as a hub for all the resources, projects, and insights I've gathered along the way.
 
 ## About This Repository
 
