@@ -39,9 +39,9 @@ if button:
     for i in recommendations:
         st.write(i)
 
-    # success_message = st.empty()
-    # success_message.success('Recommended')
-    # time.sleep(2)
-    # success_message.empty()
+    success_message = st.empty()
+    success_message.success('Recommended')
+    time.sleep(2)
+    success_message.empty()
 
 
