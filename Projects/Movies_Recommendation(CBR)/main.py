@@ -12,8 +12,8 @@ movies_list = movies_list['title'].tolist()
 
 
 def recommendor(movie):
-    f'here'
-    # movie_index: int = movies_list[movies_list['title'] == movie].index[0]
+
+    movie_index: int = movies_list[movies_list['title'] == movie].index[0]
 
     if movie in movies_list:
         movie_index = movies_list.index(movie)
