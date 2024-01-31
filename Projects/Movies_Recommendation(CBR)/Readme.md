@@ -40,4 +40,5 @@ and deployed it on this URL: [path](https://localhost)
 - Streamlit for simplifying the creation of the user interface.
 - The open-source community for valuable resources and inspiration.
 
-Feel free to explore and contribute to further enhancements of this Movie Recommender System. Enjoy discovering new movies tailored to your preferences!
+Feel free to explore and contribute to further enhancements of this Movie Recommender System. 
+Enjoy discovering new movies tailored to your preferences!
