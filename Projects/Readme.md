@@ -29,6 +29,11 @@ Welcome to my Machine Learning Projects repository! This collection includes som
 - **Description:** Collaborative-based recommendation system for suggesting movies based on user preferences.
 - **Link:** [Movies Recommendation (CBR) Project](/Movies_Recommendation)
 
+### 6. Bank customer churn prediction ( kaggle competition )
+
+- **Description:** Ml project for predicting whether a customer will churn/leave a bank or not using the bank dataset.
+- **Link:** [Bank customer churn prediction ( kaggle competition )](/Bank customer churn prediction ( kaggle competition )
+
 ## How to Use
 
 1. Navigate to the specific project folder.
