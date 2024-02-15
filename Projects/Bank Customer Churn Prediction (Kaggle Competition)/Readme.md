@@ -1,4 +1,4 @@
-## Binary Classification with a Bank Churn Dataset
+# Binary Classification with a Bank Churn Dataset
 
 ### Introduction
 This GitHub project focuses on binary classification using a Bank Churn Dataset. The goal is to predict whether a bank customer will churn or not based on various features provided in the dataset. The project includes data preprocessing steps and the implementation of an Artificial Neural Network (ANN) model.
@@ -50,6 +50,7 @@ This project is licensed under the [MIT License](LICENSE).
 ### Acknowledgments
 - The dataset used in this project is sourced from [source_name] and [source_link].
 - Inspiration for model optimization techniques from [reference].
+
 
 Feel free to contribute to this project by suggesting improvements, reporting issues, or adding new features. Your feedback is highly appreciated!
 
