@@ -48,7 +48,7 @@ After optimizing the model hyperparameters, the ANN model achieved an accuracy o
 This project is licensed under the [MIT License](LICENSE).
 
 ### Acknowledgments
-- The dataset used in this project is sourced from [source_name] and [source_link].
+- The dataset used in this project is sourced from [kaggle] and [https://www.kaggle.com/competitions/playground-series-s4e1/data?select=test.csv].
 - Inspiration for model optimization techniques from [reference].
 
 
