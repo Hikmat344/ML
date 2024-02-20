@@ -48,7 +48,7 @@ This project is licensed under the [MIT License](LICENSE).
 
 ### Acknowledgments
 - The dataset used in this project is sourced from [kaggle] and [https://www.kaggle.com/competitions/playground-series-s4e1/data?select=test.csv].
-- Inspiration for model optimization techniques from [reference].
+- Inspiration for model optimization techniques from [https://www.seldon.io/machine-learning-optimisation#:~:text=What%20is%20machine%20learning%20optimisation,insight%20learned%20from%20training%20data.].
 
 
 Feel free to contribute to this project by suggesting improvements, reporting issues, or adding new features. Your feedback is highly appreciated!
