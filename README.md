@@ -1,7 +1,6 @@
 # Happy to see you here!
 # Welcome to My Machine Learning Journey Repository! 🚀
 Hello and welcome, fellow ML enthusiasts! 👋 I'm excited to share my machine-learning journey with you. This repository serves as a hub for all the resources, projects, and insights I've gathered along the way.
-
 ## About This Repository
 
 Here, you'll find a collection of my machine learning projects, experiments, and various resources that have been instrumental in shaping my journey in the world of ML. Whether you're a beginner exploring the basics or an experienced practitioner diving into advanced topics, there's something here for everyone.
