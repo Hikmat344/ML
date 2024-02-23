@@ -35,10 +35,5 @@ The results of the heart disease detection model are presented in terms of accur
 - Incorporate additional features or datasets to improve the model's predictive capabilities.
 - Develop a user-friendly interface for the heart disease detection tool to facilitate its usage by healthcare professionals.
 
-## Contributors
-- [Your Name]
-- [Contributor 2 Name (if any)]
-- [Contributor 3 Name (if any)]
-
 ## License
 This project is licensed under the [MIT License](LICENSE). Feel free to use, modify, and distribute the code for educational and non-commercial purposes.
