@@ -4,7 +4,7 @@
 This project aims to detect heart disease using the K-Nearest Neighbors (KNN) machine learning algorithm. Heart disease is a significant health concern worldwide, and early detection plays a crucial role in preventing severe complications. By leveraging the power of machine learning, this project aims to provide a reliable tool for identifying individuals at risk of heart disease based on their health data.
 
 ## Dataset
-The dataset used in this project is sourced from [source_name]. It contains various attributes related to the health status of individuals, including age, sex, blood pressure, cholesterol levels, and other relevant factors. The dataset is preprocessed to handle missing values, normalize features, and ensure data quality before applying the KNN algorithm.
+The dataset used in this project is sourced from [kaggle]. It contains various attributes related to the health status of individuals, including age, sex, blood pressure, cholesterol levels, and other relevant factors. The dataset is preprocessed to handle missing values, normalize features, and ensure data quality before applying the KNN algorithm.
 
 ## Methodology
 1. **Data Preprocessing**: The dataset undergoes preprocessing steps such as handling missing values, feature normalization, and encoding categorical variables to prepare it for the KNN algorithm.
