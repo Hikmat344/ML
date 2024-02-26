@@ -25,7 +25,7 @@ After optimizing the model hyperparameters, the ANN model achieved an accuracy o
 - `data/`: Directory containing the bank churn dataset.
 - `notebooks/`: Directory containing Jupyter notebooks used for data preprocessing, model implementation, and optimization.
 - `scripts/`: Directory containing any supporting scripts used in the project.
-- `README.md`: This README file providing an overview of the project.
+- `README.md`: This README file provides an overview of the project.
 
 ### Usage
 1. Clone the repository to your local machine.
